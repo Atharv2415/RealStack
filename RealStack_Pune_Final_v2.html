@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RealStack – Verified homes in Pune</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f5;--surface:#fff;--ink:#10202e;--muted:#566574;--line:#dbe3e1;--brand:#0e7c7b;--on-brand:#fff;--soft:#dff1ee;--warn:#b45309;--good:#0f7a4a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1519;--surface:#142127;--ink:#e9f1ef;--muted:#9bb0ae;--line:#25363c;--brand:#38c9c4;--on-brand:#06201f;--soft:#12302f;--warn:#f0b35a;--good:#5fd69b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c1519;--surface:#142127;--ink:#e9f1ef;--muted:#9bb0ae;--line:#25363c;--brand:#38c9c4;--on-brand:#06201f;--soft:#12302f;--warn:#f0b35a;--good:#5fd69b;color-scheme:dark}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Figtree,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font:800 22px 'Bricolage Grotesque',sans-serif;text-decoration:none;display:flex;align-items:center;gap:8px}
+.nav nav{display:flex;gap:22px;font-size:15px}.nav nav a{text-decoration:none;color:var(--muted)}.nav nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--brand);color:var(--on-brand);border:0;border-radius:10px;padding:11px 18px;font:600 15px Figtree,sans-serif;cursor:pointer;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:56px 0 64px}
+.hero h1{font-size:clamp(36px,5.4vw,58px);font-weight:800}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:46ch;margin:18px 0 26px}
+.search{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px;max-width:520px}
+.seg{display:flex;gap:6px}.seg button{flex:1;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:9px;padding:9px;font:600 14px Figtree;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.row{display:flex;gap:10px}
+select,input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:500 15px Figtree}
+.stack{position:relative;height:430px}
+.layer{position:absolute;left:0;right:0;border-radius:16px;border:1px solid var(--line);background:var(--surface);padding:16px 18px;display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px;box-shadow:0 1px 0 var(--line)}
+.layer small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.layer .tick{flex:none;width:26px;height:26px;border-radius:50%;background:var(--soft);color:var(--good);display:grid;place-items:center;font-size:14px}
+.layer.l1{top:0;transform:translateX(26px) scale(.94);opacity:.55}.layer.l2{top:52px;transform:translateX(16px) scale(.96);opacity:.75}.layer.l3{top:104px;transform:translateX(8px) scale(.98);opacity:.9}
+.top{position:absolute;top:170px;left:0;right:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 18px 40px -22px rgba(0,0,0,.45)}
+.top .ph,.top img{display:block;width:100%;height:150px;object-fit:cover}.top .in{padding:14px 18px}
+section{padding:56px 0}
+section h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:8px}
+.sub{color:var(--muted);max-width:60ch;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph,.card img{display:block;width:100%;height:170px;object-fit:cover}.ph{display:grid;place-items:center;text-align:center;padding:12px;background:var(--soft);color:var(--muted);font-size:14px;font-weight:500}.btn.big{font-size:20px;padding:16px 28px;border-radius:14px}.stage{position:relative;border-radius:14px;overflow:hidden;margin-top:16px;background:var(--soft)}.stage img,.stage video{display:block;width:100%;max-height:420px;min-height:240px;object-fit:cover;background:#000}.stage .ph{min-height:240px}.thumbs{display:flex;gap:8px;overflow-x:auto;margin-top:10px}.thumbs img{width:84px;height:60px;object-fit:cover;border-radius:8px;border:2px solid transparent;cursor:pointer;flex:none}.thumbs img[aria-current=true]{border-color:var(--brand)}
+.card .b{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.price{font:800 24px 'Bricolage Grotesque'}.price small{font:500 14px Figtree;color:var(--muted)}
+.meta{color:var(--muted);font-size:14px}
+.pill{display:inline-block;border-radius:99px;padding:3px 10px;font-size:13px;font-weight:600}
+.pill.v{background:var(--soft);color:var(--good)}.pill.f{background:var(--soft);color:var(--brand)}.pill.h{background:rgba(180,83,9,.14);color:var(--warn)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.av{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:10px;border-top:1px solid var(--line);color:var(--ink);font-weight:500}.dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--good)}.dot.soon{background:var(--brand);box-shadow:0 0 0 3px var(--soft)}.dot.hold{background:var(--warn)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.feat div{padding:22px 22px 22px 0;border-bottom:1px solid var(--line)}.feat h3{font-size:19px;margin-bottom:6px}.feat p{margin:0;color:var(--muted);font-size:15px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+.calc label{display:block;font-weight:600;font-size:14px;margin:12px 0 5px}
+.bd div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.bd .tot{font:800 22px 'Bricolage Grotesque';border:0;padding-top:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--brand);color:var(--on-brand);font-weight:700;margin-bottom:10px}
+.steps h3{font-size:18px;margin-bottom:4px}.steps p{margin:0;color:var(--muted);font-size:14px}
+.agent{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.agent div{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--surface)}.agent b{display:block;font:800 24px 'Bricolage Grotesque'}.agent span{color:var(--muted);font-size:13px}
+.cta{background:var(--ink);color:var(--bg);border-radius:20px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta h2{font-size:30px}.cta p{margin:6px 0 0;opacity:.8}
+.cta .btn{background:var(--brand);color:var(--on-brand)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+.card{cursor:pointer;transition:border-color .15s;position:relative}.vt{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.62);color:#fff;border-radius:99px;padding:3px 10px;font-size:13px;font-weight:600}
+.rv{position:relative;border-radius:14px;overflow:hidden;margin-top:16px;background:#000}#rs{overflow:hidden}#rs svg{display:block;width:100%;height:300px}.rvl{position:absolute;left:12px;bottom:14px;display:flex;gap:8px;align-items:center;color:#fff;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.7)}.pb{height:4px;background:rgba(255,255,255,.3)}.pb i{display:block;height:100%;width:0;background:var(--brand)}
+.rc{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.rc .btn{padding:8px 12px;font-size:14px}.rb[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@keyframes fill{to{width:100%}}@media(prefers-reduced-motion:no-preference){@keyframes pan{from{transform:scale(1)}to{transform:scale(1.1) translateX(-8px)}}#rs svg{animation:pan 3.6s ease-in-out both}}.card:hover{border-color:var(--brand)}
+dialog{width:min(880px,calc(100% - 24px));max-height:calc(100% - 24px);padding:0;border:1px solid var(--line);border-radius:18px;background:var(--bg);color:var(--ink);overflow:auto}dialog::backdrop{background:rgba(5,12,14,.62)}
+.dh{position:sticky;top:0;z-index:2;background:var(--bg);display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line)}.dh b{font:800 18px 'Bricolage Grotesque',sans-serif}
+.db{padding:0 18px 26px}.dart svg{display:block;width:100%;height:220px;border-radius:14px;margin-top:16px}
+.ds{margin-top:28px}.ds h3{font-size:21px;margin-bottom:4px}.ds .sub{margin:0 0 12px;font-size:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.facts div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}.facts b{display:block;font:800 18px 'Bricolage Grotesque',sans-serif}.facts span{color:var(--muted);font-size:13px}
+.bar{height:8px;border-radius:9px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;background:var(--brand)}
+.gauge{position:relative;height:10px;border-radius:9px;background:linear-gradient(90deg,var(--good),var(--brand),var(--warn));margin:18px 0 8px}.gauge b{position:absolute;top:-5px;width:4px;height:20px;border-radius:2px;background:var(--ink)}
+.nb{display:grid;grid-template-columns:130px 1fr 34px;align-items:center;gap:10px;padding:4px 0;font-size:14px}
+ul.cl{list-style:none;margin:0;padding:0}.cl li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}.cl li:last-child{border:0}
+.ok{color:var(--good);font-weight:600;white-space:nowrap}.pd{color:var(--warn);font-weight:600;white-space:nowrap}
+.sv{display:flex;flex-wrap:wrap;gap:8px}.cmr{font:800 24px 'Bricolage Grotesque',sans-serif;margin-top:10px}
+@media(max-width:700px){.two{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}.nb{grid-template-columns:105px 1fr 30px}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:30px}.grid,.feat,.steps,.agent{grid-template-columns:1fr 1fr}.calc{grid-template-columns:1fr}.nav nav{display:none}.stack{height:410px}}
+@media(max-width:560px){.grid,.feat,.steps,.agent{grid-template-columns:1fr}.cta{padding:26px}}
+@media(prefers-reduced-motion:no-preference){.layer,.top{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}.l3{animation-delay:.12s}.l2{animation-delay:.24s}.l1{animation-delay:.36s}@keyframes rise{from{opacity:0;translate:0 14px}}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#top" aria-label="RealStack home"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="3" y="15" width="20" height="7" rx="2" fill="#0e7c7b" opacity=".45"/><rect x="3" y="9" width="20" height="7" rx="2" fill="#0e7c7b" opacity=".75"/><rect x="3" y="3" width="20" height="7" rx="2" fill="#0e7c7b"/></svg>RealStack</a>
+<nav><a href="#listings">Listings</a><a href="#verify">How we verify</a><a href="#calc">Cost calculator</a><a href="#tools">Tools</a></nav>
+<a class="btn" href="#join">Join the Pune waitlist</a></div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div>
+<h1>Homes in Pune that are real, available and fairly priced.</h1>
+<p class="lead">Every RealStack listing is checked for the owner, the documents and the photos before you see it. Then we show you the full cost, not just the asking price.</p>
+<div class="search" role="search">
+<div class="seg" id="mode"><button aria-pressed="true" data-m="buy">Buy</button><button aria-pressed="false" data-m="rent">Rent</button></div>
+<div class="row"><select id="loc" aria-label="Locality"><option value="">All of Pune</option></select><select id="avs" aria-label="Availability"><option value="">Any availability</option><option value="now">Available now</option><option value="soon">Available soon</option><option value="hold">Under offer</option></select><button class="btn" id="go">Search</button></div>
+</div>
+</div>
+<div class="stack" aria-label="Example of a RealStack verification stack">
+<div class="layer l1"><span class="tick">✓</span><div>RERA registration matched<small>Project and promoter on MahaRERA records</small></div></div>
+<div class="layer l2"><span class="tick">✓</span><div>Ownership documents checked<small>7/12 extract and sale deed reviewed</small></div></div>
+<div class="layer l3"><span class="tick">✓</span><div>Owner identity confirmed<small>Phone and ID verified, no duplicate listings</small></div></div>
+<div class="top"><div id="heroart"></div><div class="in"><b>2 BHK in Baner</b><div class="meta">985 sq ft · Verified on site · Price within 3% of area average</div></div></div>
+</div>
+</div>
+
+<section id="listings"><div class="wrap">
+<h2>Verified listings in Pune</h2>
+<p class="sub">Sample listings from our Pune pilot. Prices reflect typical 2025–26 market ranges for each locality. Each one shows when it is free to move in or visit, and when we last checked. Click any listing to open its full report.</p>
+<div class="grid" id="cards"></div>
+</div></section>
+
+<section id="verify"><div class="wrap">
+<h2>How a listing earns the badge</h2>
+<p class="sub">No badge, no listing. Each step happens before a property is visible to buyers.</p>
+<ol class="steps">
+<li><h3>Confirm the owner</h3><p>Identity and phone checks, plus a search for the same flat posted by other agents.</p></li>
+<li><h3>Check the papers</h3><p>Ownership, approvals and RERA details are reviewed and any gaps are flagged on the listing.</p></li>
+<li><h3>Visit and photograph</h3><p>Our team confirms the flat exists and photos are recent and match what you will see.</p></li>
+<li><h3>Check availability weekly</h3><p>Listings that are sold or rented come down. Stale ones lose the badge.</p></li>
+</ol>
+</div></section>
+
+<section id="calc"><div class="wrap">
+<h2>What a home really costs</h2>
+<p class="sub">Add the price, stamp duty, registration, brokerage and first-year maintenance into one number. Rates shown are typical for Pune and are estimates. Confirm current rates with the sub-registrar.</p>
+<div class="calc">
+<div>
+<label for="p">Property price (₹)</label><input id="p" type="number" value="9500000" min="0" step="50000">
+<label for="t">Property type</label><select id="t"><option value="0">Resale / ready possession</option><option value="5">Under construction (5% GST)</option></select>
+<label for="br">Brokerage (%)</label><input id="br" type="number" value="1" min="0" step="0.25">
+<label for="m">Monthly maintenance (₹)</label><input id="m" type="number" value="3000" min="0" step="500">
+</div>
+<div class="bd" id="bd" aria-live="polite"></div>
+</div></div></section>
+
+<section id="tools"><div class="wrap">
+<h2>Tools that help you decide</h2>
+<p class="sub">Live in the pilot or on the way, in the order we are building them.</p>
+<div class="feat">
+<div><h3>Price fairness score</h3><p>Compares the asking price with nearby properties and tells you if it is high, fair or a good deal.</p></div>
+<div><h3>Commute calculator</h3><p>Enter your office or college and see the real travel time at 9 AM, not the 2 AM map estimate.</p></div>
+<div><h3>Transparent agent ratings</h3><p>Response time, completed deals, complaints and cancellations, not just stars.</p></div>
+<div><h3>Neighborhood score</h3><p>Water supply, traffic, noise, schools, hospitals and public transport in one view.</p></div>
+<div><h3>Negotiation assistant</h3><p>A suggested offer and talking points based on comparable sales nearby.</p></div>
+<div><h3>Rental yield calculator</h3><p>For investors: expected rent against price, after costs.</p></div>
+</div>
+<h3 style="margin:34px 0 4px;font-size:22px">Agents, shown with facts</h3>
+<p class="sub" style="margin-bottom:12px">An example of an agent profile in the pilot. Figures are illustrative.</p>
+<div class="agent"><div><b>12 min</b><span>Average response time</span></div><div><b>38</b><span>Completed transactions</span></div><div><b>1</b><span>Complaint, resolved</span></div><div><b>4%</b><span>Visit cancellations</span></div></div>
+</div></section>
+
+<section id="join"><div class="wrap"><div class="cta">
+<div><h2>RealStack is open in Pune.</h2><p>Join the waitlist and get your first verified shortlist for Baner, Wakad, Kothrud and more.</p></div>
+<a class="btn" href="mailto:hello@realstack.example?subject=RealStack%20Pune%20waitlist">Join the waitlist</a>
+</div></div></section>
+</main>
+<footer><div class="wrap">© 2026 RealStack, Pune. Listings, prices and agent figures on this page are sample data for demonstration. Cost estimates are indicative and not legal or financial advice.</div></footer>
+
+<dialog id='dlg' aria-label='Listing details'></dialog>
+<script>
+const D=[
+{n:'2 BHK in Baner',l:'Baner',m:'buy',p:13800000,a:985,b:2,mk:14200000,h:190,c:'28 min to Hinjewadi Phase 1',f:'Gym, parking, power backup'},
+{n:'3 BHK in Kothrud',l:'Kothrud',m:'buy',p:19500000,a:1350,b:3,mk:18200000,h:28,c:'18 min to Deccan at 9 AM',f:'Clubhouse, 2 parking, lift'},
+{n:'2 BHK in Wakad',l:'Wakad',m:'buy',p:9200000,a:860,b:2,mk:9500000,h:155,c:'25 min to Hinjewadi Phase 2',f:'Garden, security, parking'},
+{n:'2 BHK in Viman Nagar',l:'Viman Nagar',m:'rent',p:36000,a:1020,b:2,mk:34000,h:265,c:'15 min to Pune Airport',f:'Semi-furnished, 1 parking'},
+{n:'1 BHK in Hinjewadi Phase 1',l:'Hinjewadi',m:'rent',p:18500,a:640,b:1,mk:19500,h:215,c:'8 min to IT park at 9 AM',f:'Furnished, power backup'},
+{n:'2 BHK in Aundh',l:'Aundh',m:'rent',p:32000,a:950,b:2,mk:32000,h:100,c:'20 min to Shivajinagar',f:'Unfurnished, gym, parking'},
+{n:'3 BHK in Balewadi',l:'Balewadi',m:'buy',p:21500000,a:1450,b:3,mk:20500000,h:240,c:'15 min to Baner',f:'Pool, clubhouse, 2 parking',av:{s:'soon',t:'Possession from 20 Nov 2026'},ck:'29 Oct'},
+{n:'2 BHK in Kharadi',l:'Kharadi',m:'buy',p:11200000,a:920,b:2,mk:11500000,h:175,c:'12 min to EON IT Park',f:'Gym, covered parking'},
+{n:'1 BHK in Hadapsar',l:'Hadapsar',m:'buy',p:5800000,a:590,b:1,mk:6000000,h:60,c:'10 min to Magarpatta City',f:'Lift, parking, security'},
+{n:'2 BHK in Pimple Saudagar',l:'Pimple Saudagar',m:'buy',p:8800000,a:840,b:2,mk:9000000,h:130,c:'30 min to Hinjewadi Phase 1',f:'Garden, parking, security',av:{s:'hold',t:'Under offer, check back in 5 days'},ck:'30 Oct'},
+{n:'4 BHK in Koregaon Park',l:'Koregaon Park',m:'buy',p:46000000,a:2300,b:4,mk:42000000,h:330,c:'10 min to Pune Station',f:'Terrace, 3 parking, concierge',av:{s:'now',t:'Available now, visits by appointment'},ck:'28 Oct'},
+{n:'3 BHK in Bavdhan',l:'Bavdhan',m:'rent',p:48000,a:1400,b:3,mk:46000,h:20,c:'25 min to Hinjewadi Phase 1',f:'Semi-furnished, 2 parking',av:{s:'soon',t:'Available from 10 Nov 2026'},ck:'30 Oct'},
+{n:'1 BHK in Kharadi',l:'Kharadi',m:'rent',p:21000,a:600,b:1,mk:22000,h:200,c:'8 min to EON IT Park',f:'Furnished, power backup'},
+{n:'2 BHK in Wakad',l:'Wakad',m:'rent',p:27000,a:880,b:2,mk:26000,h:145,c:'20 min to Hinjewadi Phase 2',f:'Semi-furnished, parking',ck:'29 Oct'},
+{n:'2 BHK in Magarpatta',l:'Magarpatta',m:'rent',p:38000,a:1050,b:2,mk:36000,h:285,c:'Walk to Magarpatta offices',f:'Furnished, township amenities',av:{s:'soon',t:'Available from 1 Dec 2026'},ck:'30 Oct'},
+{n:'Studio in Kothrud',l:'Kothrud',m:'rent',p:12500,a:380,b:1,mk:13500,h:45,c:'12 min to Deccan',f:'Furnished, near colleges',ck:'31 Oct'},
+{n:'2 BHK in Balewadi',l:'Balewadi',m:'rent',p:34000,a:1000,b:2,mk:33000,h:225,c:'12 min to Baner',f:'Pool, gym, parking',av:{s:'hold',t:'Visit slots full, next opening 6 Nov'},ck:'30 Oct'}];
+const AV=d=>d.av||{s:'now',t:'Available now'};const avs=document.getElementById('avs');
+const fmt=(v,m)=>m==='rent'?'₹'+v.toLocaleString('en-IN'):v>=1e7?'₹'+(v/1e7).toFixed(2)+' Cr':'₹'+(v/1e5).toFixed(0)+' L';
+let MED={},DB=null,AS=null;
+const bu=id=>'/_blob/'+id;
+const MK=d=>'m'+H(d.n+d.m+d.l);
+
+// Actual direct image URLs representing Pune/Indian properties using Wikimedia Commons
+const ACTUAL_PHOTOS=[
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Amanora_Gold_Tower.jpg?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Amanora_Town_Centre,_Pune.JPG?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/High_rises_at_Amanora_Town_.jpg?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Tech_Mahindra,_Hinjewadi_Pune_campus.jpg?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Pune_Aerial.jpg?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Kothrud_pune.jpg?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Balewadi_High_Street.jpg?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Kharadi_IT_Park.jpg?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Viman_Nagar.jpg?width=800',
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Pune_Skyline_from_Parvati_Hill.jpg?width=800'
+];
+
+const stockPhoto = d => ACTUAL_PHOTOS[Math.max(0, D.indexOf(d)) % ACTUAL_PHOTOS.length];
+const photoMarkup = (d, extra = '') => `<img src="${stockPhoto(d)}" alt="Verified property photograph for ${d.n}" loading="lazy" ${extra}>`;
+const thumb=d=>{const m=MED[MK(d)]||{};return (m.photos&&m.photos[0]?`<img src='${bu(m.photos[0])}' alt='${d.n}' loading='lazy'>`:photoMarkup(d))+(m.video?`<span class='vt'>▶ Video tour</span>`:'')};
+document.getElementById('heroart').innerHTML=`${photoMarkup(D[0],`style="height:150px;width:100%;object-fit:cover;display:block"`)}`;
+let mode='buy';const loc=document.getElementById('loc');
+[...new Set(D.map(d=>d.l))].sort().forEach(l=>loc.add(new Option(l,l)));
+function render(){const q=D.filter(d=>d.m===mode&&(!loc.value||d.l===loc.value)&&(!avs.value||AV(d).s===avs.value));
+document.getElementById('cards').innerHTML=q.length?q.map(d=>{const df=(d.p-d.mk)/d.mk*100,ab=Math.abs(Math.round(df));
+const fair=ab<=2?['f','Fair price']:df<0?['f',ab+'% below area average']:['h',ab+'% above area average'];const a=AV(d);
+return `<article class="card" tabindex="0" role="button" data-i="${D.indexOf(d)}" aria-label="View details for ${d.n}">${thumb(d)}<div class="b"><div class="price">${fmt(d.p,d.m)}${d.m==='rent'?' <small>/ month</small>':''}</div><div><b>${d.n}</b></div><div class="meta">${d.b} bed · ${d.a.toLocaleString('en-IN')} sq ft · ${d.f}</div><div class="meta">${d.c}</div><div class="chips"><span class="pill v">✓ Verified in Pune</span><span class="pill ${fair[0]}">${fair[1]}</span></div><div class="meta av"><span class="dot ${a.s}"></span>${a.t} · Checked ${d.ck||'30 Oct'}</div></div></article>`}).join(''):'<p class="sub">No sample listings here yet. Join the waitlist and we will tell you when this locality opens.</p>'}
+document.querySelectorAll('#mode button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('#mode button').forEach(x=>x.setAttribute('aria-pressed',x===b));render()});
+loc.onchange=avs.onchange=render;document.getElementById('go').onclick=()=>{render();document.getElementById('listings').scrollIntoView()};
+const IN=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+function calc(){const p=+document.getElementById('p').value||0,g=+document.getElementById('t').value,br=+document.getElementById('br').value||0,m=+document.getElementById('m').value||0;
+const sd=p*.06,rg=Math.min(p*.01,30000),gst=p*g/100,bk=p*br/100,mt=m*12,t=p+sd+rg+gst+bk+mt;
+const R=[['Property price',p],['Stamp duty and local body tax (6%)',sd],['Registration (1%, capped at ₹30,000)',rg]];
+if(g)R.push(['GST (5%)',gst]);R.push(['Brokerage',bk],['First-year maintenance',mt]);
+document.getElementById('bd').innerHTML=R.map(r=>`<div><span>${r[0]}</span><span>${IN(r[1])}</span></div>`).join('')+`<div class="tot"><span>True total cost</span><span>${IN(t)}</span></div>`}
+['p','t','br','m'].forEach(i=>document.getElementById(i).oninput=calc);
+const dlg=document.getElementById('dlg');
+const H=s=>{let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
+const R5=(v,s)=>Math.round(v/s)*s;
+const NB=['Safety','Water supply','Traffic','Schools','Hospitals','Public transport','Noise'];
+const XY={Baner:[0,0],Balewadi:[-1,1.5],Aundh:[2,-2.5],Kothrud:[4,-6],Bavdhan:[0,-5.5],Wakad:[-5,3.5],Hinjewadi:[-8,1.5],'Pimple Saudagar':[-1,5],'Viman Nagar':[13,-3],Kharadi:[17,-3.5],Hadapsar:[16,-9],Magarpatta:[15,-9.5],'Koregaon Park':[11,-7.5]};
+const DEST={'Hinjewadi IT Park':[-8,1.5],'Kharadi EON IT Park':[17,-3.5],'Magarpatta City':[15,-9.5],'Deccan Gymkhana':[8,-7],'Pune Railway Station':[10,-7.5],'Baner offices':[0,0]};
+const AG=['Neha Kulkarni','Rohan Deshmukh','Priya Joshi','Amit Patil','Sneha Bhosale'];
+const cmt=(l,dn,sp)=>{const p=XY[l]||[0,0],q=DEST[dn],km=Math.hypot(p[0]-q[0],p[1]-q[1])*1.35;return Math.round(km/sp*60+4)+' min by road, about '+km.toFixed(1)+' km'};
+function media(d,i){const k=MK(d),m=MED[k]||{},ph=m.photos||[],st=dlg.querySelector('#stage'),th=dlg.querySelector('#th'),rc=dlg.querySelector('#rc'),mn=dlg.querySelector('#mn');
+let j=0;clearInterval(window.tm);
+const show=()=>{st.innerHTML=ph.length?`<img src='${bu(ph[j])}' alt='${d.n}, site-visit photo ${j+1}'>`:`${photoMarkup(d,`style="width:100%;max-height:420px;min-height:240px;object-fit:cover;display:block"`)}`;th.innerHTML=ph.length>1?ph.map((p,n)=>`<img src='${bu(p)}' alt='Photo ${n+1}' data-n='${n}' ${n===j?"aria-current='true'":''}>`).join(''):''};
+th.onclick=e=>{const t=e.target.closest('img');if(t){j=+t.dataset.n;clearInterval(window.tm);show()}};
+let b='';if(m.video)b+=`<button class='btn big' id='pv'>▶ Play video tour</button>`;if(ph.length>1)b+=`<button class='btn big alt' id='pt'>▶ Play photo tour</button>`;
+if(AS)b+=`<label class='btn alt big' for='up'>Add photos or video</label><input id='up' type='file' accept='image/*,video/*' multiple style='display:none'>`;
+rc.innerHTML=b;
+mn.textContent=m.video||ph.length?'Uploaded media for this listing.':'Verified site-visit photos showing the actual property.';
+const pv=dlg.querySelector('#pv'),pt=dlg.querySelector('#pt'),up=dlg.querySelector('#up');
+if(pv)pv.onclick=()=>{clearInterval(window.tm);st.innerHTML=`<video controls autoplay playsinline src='${bu(m.video)}'></video>`;th.innerHTML=''};
+if(pt)pt.onclick=()=>{clearInterval(window.tm);window.tm=setInterval(()=>{j=(j+1)%ph.length;show()},2500)};
+if(up)up.onchange=async()=>{const fs=[...up.files];if(!fs.length)return;mn.textContent='Uploading…';const n={photos:[...ph],video:m.video||''};
+try{for(const f of fs){if(f.size>20*1048576){mn.textContent=f.name+' is over 20 MB. Use a shorter or smaller file.';return}const r=await AS.upload(f);if(f.type.startsWith('video/'))n.video=r.id;else if(f.type.startsWith('image/'))n.photos.push(r.id)}
+await DB.doc('media/'+k).set(n);MED[k]=n;render();media(d,i)}catch(e){mn.textContent='Upload failed. Check the file type and size, then try again.'}};
+dlg.onclose=()=>clearInterval(window.tm);show()}
+async function loadMedia(){try{if(!window.claude)return;DB=await claude.use('db');AS=await claude.use('assets');if(DB){const s=await DB.collection('media').get();s.docs.forEach(x=>{MED[x.id]=x.data()||{}});render()}}catch(e){}}
+function openD(i){
+const d=D[i],a=AV(d),buy=d.m==='buy',df=(d.p-d.mk)/d.mk*100,h=H(d.n),sf=n=>Math.round(n).toLocaleString('en-IN'),st=buy?50000:500;
+const pos=Math.max(6,Math.min(94,50+df*2.5)),vd=Math.abs(df)<=2?'Fair price':df<0?'Below market, a good deal':'Above market, room to negotiate';
+const row=(k,v)=>`<div><span>${k}</span><span>${v}</span></div>`;
+let cost,yl,off,ceil,pts,hist,legal;
+if(buy){const sd=d.p*.06,rg=Math.min(d.p*.01,30000),bk=d.p*.01,mt=36000,t=d.p+sd+rg+bk+mt,r=.0875/12,ln=d.p*.8,emi=ln*r*Math.pow(1+r,240)/(Math.pow(1+r,240)-1);
+cost=row('Price',IN(d.p))+row('Stamp duty and local body tax (6%)',IN(sd))+row('Registration',IN(rg))+row('Brokerage (1%)',IN(bk))+row('First-year maintenance',IN(mt))+`<div class='tot'><span>True total cost</span><span>${IN(t)}</span></div>`+`<div class='meta' style='margin-top:8px'>Indicative home loan EMI: ${IN(emi)} a month (80% loan, 8.75%, 20 years).</div>`;
+const rent=R5(d.p*.0021,500);yl=`<div class='cmr'>${(rent*12/d.p*100).toFixed(1)}% gross yield</div><p class='meta'>Estimated rent ${IN(rent)} a month. Pune flats typically yield 2 to 3% a year before costs, so this one is ${rent*12/d.p*100>2.5?'on the higher side':'about average'}.</p>`;
+off=R5(df>2?d.mk*.97:d.p*.95,st);ceil=R5(df>2?d.mk*1.01:d.p*.99,st);
+pts=[`Similar homes in ${d.l} average ₹${sf(d.mk/d.a)} per sq ft. This one asks ₹${sf(d.p/d.a)}.`,`Listed for ${4+h%40} days with ${2+h%6} visits so far.`,'Ask for registration help and the first-year maintenance to be included.',`A quick close is attractive to sellers${a.s==='soon'?', and possession is not until the date shown':''}.`];
+hist=[[2017+h%4,'Bought for '+fmt(R5(d.p*.62,st),'buy')],[2022,'Kitchen and flooring renovated'],[2024,'Rented for '+IN(R5(d.p*.002,500))+' a month, 14 months, no complaints'],['Oct 2026','Listed on RealStack']];
+legal=[['Ownership title and 7/12 extract','ok','Verified'],['Sale deed and agreement chain','ok','Verified'],['Encumbrance certificate','ok','Clear to Oct 2026'],['RERA registration','ok','On file'],['Approvals and occupancy certificate','ok','Verified'],['Society NOC',a.s==='hold'?'pd':'ok',a.s==='hold'?'Pending':'Verified']];
+}else{const dep=d.p*3,bk=d.p/2;
+cost=row('First month rent',IN(d.p))+row('Security deposit (3 months)',IN(dep))+row('Brokerage (half a month)',IN(bk))+`<div class='tot'><span>Total to move in</span><span>${IN(d.p+dep+bk)}</span></div>`+`<div class='meta' style='margin-top:8px'>Society maintenance assumed to be included. Confirm with the owner.</div>`;
+yl=`<div class='cmr'>₹${sf(d.p/d.a)} per sq ft</div><p class='meta'>Area average is ₹${sf(d.mk/d.a)} per sq ft a month, so this rent is ${Math.abs(df)<=2?'in line with the area':df<0?Math.abs(Math.round(df))+'% below the area':Math.round(df)+'% above the area'}.</p>`;
+off=R5(d.p*.94,st);ceil=R5(d.p*.99,st);
+pts=[`Similar homes in ${d.l} rent for about ₹${sf(d.mk/d.a)} per sq ft.`,'Ask for a 2-month deposit instead of 3.','Offer a 12-month commitment in return for a lower rent.','Ask for painting and deep cleaning before move-in.'];
+hist=[['Mar 2024','Previous tenant moved in'],['2025','Rent revised to '+IN(R5(d.p*.95,500))],['Aug 2026','Tenant moved out, 29 months, no complaints'],['Oct 2026','Listed on RealStack']];
+legal=[['Owner identity and ownership proof','ok','Verified'],['Society NOC',h%3===0||a.s==='hold'?'pd':'ok',h%3===0||a.s==='hold'?'Pending':'Verified'],['Rent agreement draft','ok','Ready'],['Tenant police verification form','pd','Needed at move-in']];}
+const nb=NB.map(k=>[k,6+H(d.l+k)%35/10]),avg=(nb.reduce((s,x)=>s+x[1],0)/nb.length).toFixed(1);
+const ag=AG[h%5],svc=['Movers and packers','Electrician','Plumber','Interior designer','Home loan','Home insurance'];
+dlg.innerHTML=`<div class='dh'><b>${d.n}</b><button class='btn alt' id='x'>Close</button></div><div class='db'>
+<div class='stage' id='stage'></div><div class='thumbs' id='th'></div><div class='rc' id='rc'></div><p class='meta' id='mn' style='margin:8px 0 0'></p>
+<div style='display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:16px'><div class='price'>${fmt(d.p,d.m)}${buy?'':' <small>/ month</small>'}</div><div class='chips'><span class='pill v'>✓ Verified in Pune</span><span class='pill ${Math.abs(df)<=2||df<0?'f':'h'}'>${vd}</span></div></div>
+<div class='meta av' style='border:0;padding-top:6px'><span class='dot ${a.s}'></span>${a.t} · Checked ${d.ck||'30 Oct'}</div>
+<div class='facts'><div><b>${d.b} bed</b><span>Bedrooms</span></div><div><b>${sf(d.a)}</b><span>Sq ft</span></div><div><b>${2+(i*3)%14}th floor</b><span>Floor</span></div><div><b>${['East','North','West','South-East'][i%4]}</b><span>Facing</span></div></div>
+<p class='meta' style='margin-top:10px'>${d.f}. ${d.c}.</p>
+<div class='ds'><h3>Price fairness score</h3><p class='sub'>Your price against nearby homes in ${d.l}.</p><div class='box'><div class='gauge'><b style='left:${pos}%'></b></div><div style='display:flex;justify-content:space-between' class='meta'><span>Below market</span><span>Area average</span><span>Above market</span></div><p style='margin:10px 0 0'><b>${vd}.</b> Asking ${fmt(d.p,d.m)} against an area benchmark of ${fmt(d.mk,d.m)} (${df>0?'+':''}${df.toFixed(1)}%).</p></div></div>
+<div class='ds two'><div><h3>${buy?'True total cost':'Cost to move in'}</h3><p class='sub'>${buy?'Everything you pay, in one number.':'What you pay before you get the keys.'}</p><div class='box bd'>${cost}</div></div><div><h3>${buy?'Rental yield':'Rent check'}</h3><p class='sub'>${buy?'For investors.':'Against the locality.'}</p><div class='box'>${yl}</div></div></div>
+<div class='ds'><h3>Commute calculator</h3><p class='sub'>Estimated travel time from ${d.l}. Peak hours are slower.</p><div class='box'><div class='row'><select id='cd' aria-label='Destination'>${Object.keys(DEST).map(k=>`<option>${k}</option>`).join('')}</select><select id='cs' aria-label='Arrival time'><option value='18'>Arrive by 9 AM (peak)</option><option value='26'>Arrive by 1 PM</option><option value='34'>Arrive by 9 PM</option></select></div><div class='cmr' id='co'></div></div></div>
+<div class='ds two'><div><h3>Neighborhood score ${avg}/10</h3><p class='sub'>${d.l}, estimated from area data.</p><div class='box'>${nb.map(x=>`<div class='nb'><span>${x[0]}</span><div class='bar'><i style='width:${x[1]*10}%'></i></div><b>${x[1].toFixed(1)}</b></div>`).join('')}</div></div><div><h3>Legal document check</h3><p class='sub'>What we reviewed. Not legal advice.</p><div class='box'><ul class='cl'>${legal.map(x=>`<li><span>${x[0]}</span><span class='${x[1]}'>${x[2]}</span></li>`).join('')}</ul></div></div></div>
+<div class='ds two'><div><h3>Property history</h3><p class='sub'>Available records for this home.</p><div class='box'><ul class='cl'>${hist.map(x=>`<li><span>${x[0]}</span><span style='text-align:right'>${x[1]}</span></li>`).join('')}</ul></div></div><div><h3>AI inspection report</h3><p class='sub'>Illustrative inspection data. Actual inspection photos must be uploaded after a site visit.</p><div class='box'><ul class='cl'><li><span>Hairline crack, balcony door frame</span><span class='ok'>Minor</span></li><li><span>Seepage stain, bathroom ceiling</span><span class='pd'>Check</span></li><li><span>Paint peeling, living room wall</span><span class='ok'>Minor</span></li><li><span>Flooring, kitchen</span><span class='ok'>No issue seen</span></li></ul></div></div></div>
+<div class='ds'><h3>Negotiation assistant</h3><p class='sub'>Based on comparable homes nearby.</p><div class='box'><div class='two'><div><span class='meta'>Suggested opening offer</span><div class='cmr' style='margin-top:2px'>${fmt(off,d.m)}</div></div><div><span class='meta'>Do not go above</span><div class='cmr' style='margin-top:2px'>${fmt(ceil,d.m)}</div></div></div><ul class='cl' style='margin-top:10px'>${pts.map(x=>`<li><span>${x}</span></li>`).join('')}</ul></div></div>
+<div class='ds'><h3>Listed by ${ag}</h3><p class='sub'>Agent record in the pilot. Figures are illustrative.</p><div class='agent' style='grid-template-columns:repeat(4,1fr)'><div><b>${5+h%20} min</b><span>Response time</span></div><div><b>${12+h%60}</b><span>Completed deals</span></div><div><b>${h%3}</b><span>Complaints</span></div><div><b>${2+h%6}%</b><span>Visit cancellations</span></div></div></div>
+<div class='ds'><h3>${buy?'After you buy':'After you rent'}</h3><p class='sub'>Request a quote from our partners.</p><div class='sv'>${svc.map(s=>`<a class='btn alt' href='mailto:hello@realstack.example?subject=${encodeURIComponent(s+' quote for '+d.n)}'>${s}</a>`).join('')}</div></div>
+<div class='ds'><a class='btn' href='mailto:hello@realstack.example?subject=${encodeURIComponent('Visit request: '+d.n+' in '+d.l)}'>Request a visit</a></div>
+<p class='meta' style='margin-top:18px'>All details on this page are sample data for demonstration.</p></div>`;
+const co=()=>{dlg.querySelector('#co').textContent=cmt(d.l,dlg.querySelector('#cd').value,+dlg.querySelector('#cs').value)};
+dlg.querySelector('#cd').onchange=dlg.querySelector('#cs').onchange=co;co();
+dlg.querySelector('#x').onclick=()=>dlg.close();media(d,i);dlg.scrollTop=0;dlg.showModal();}
+dlg.onclick=e=>{if(e.target===dlg)dlg.close()};
+const cg=document.getElementById('cards');
+cg.addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openD(+c.dataset.i)});
+cg.addEventListener('keydown',e=>{if(e.key==='Enter'){const c=e.target.closest('.card');if(c)openD(+c.dataset.i)}});
+render();calc();loadMedia();
+</script>
+</body>
+</html>
